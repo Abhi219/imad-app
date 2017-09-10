@@ -6,10 +6,10 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-  var 'article-one' : {
-   title: "Article one|Abhinav Sharma",
-   heading: "Article One",
-   date: "10 Sept,2017",
+  var 'article-one':{
+   title: 'Article one|Abhinav Sharma',
+   heading: 'Article One',
+   date: '10 Sept,2017',
    content: `       <p>
                         This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
                     </p>
@@ -95,7 +95,7 @@ app.get('/', function (req, res) {
 
 app.get('/articleName',function(req,res){
     var articleName =req.params.articleName;
-   res.send(createTemplate(articleOne[articleName]));
+   res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two',function(req,res){
